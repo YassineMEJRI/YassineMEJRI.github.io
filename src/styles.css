@@ -2,3 +2,9 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer base {
+    h1 {
+        @apply text-white md:text-8xl p-5 pl-10 text-3xl;
+    }
+}
