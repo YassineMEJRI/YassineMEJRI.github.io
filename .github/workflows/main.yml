@@ -27,6 +27,9 @@ jobs:
       # Sets up Node JS
       - name: Setup Node.js environment
         uses: actions/setup-node@v3.0.0
+        
+      - name: Install dependencies
+        run: npm install
        
       # Build for production
       - name: Build prod
