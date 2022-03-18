@@ -26,15 +26,15 @@ jobs:
 
       # Sets up Node JS
       - name: Setup Node.js environment
-        uses: actions/setup-node@v3.0.0
+      - uses: actions/setup-node@v3.0.0
        
       # Build for production
       - name: Build prod
-        run: npm run build:prod
+      - run: npm run build:prod
         
       # GitHub Pages action
       - name: GitHub Pages action
-        uses: peaceiris/actions-gh-pages@v3.7.3
+      - uses: peaceiris/actions-gh-pages@v3.7.3
         with:
             github_token: ${{ secrets.GITHUB_TOKEN }}
             publish_dir: dist/
