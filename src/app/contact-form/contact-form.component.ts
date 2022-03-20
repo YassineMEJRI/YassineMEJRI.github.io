@@ -25,7 +25,7 @@ export class ContactFormComponent implements OnInit {
     if(this.contactForm.valid){
       let formData = new FormData();
       formData.append('name', this.contactForm.value.fullname);
-      formData.append('email', this.contactForm.value.email);
+      formData.append('replyto', this.contactForm.value.email);
       formData.append('message', this.contactForm.value.message);
 
       this.http.post('https://formspree.io/f/xjvloplj', formData)
