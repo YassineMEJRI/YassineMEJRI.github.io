@@ -1,0 +1,21 @@
+<h2 class="text-white ">Get in touch</h2>
+
+<form id="fs-frm" accept-charset="utf-8" [formGroup]="contactForm" (ngSubmit)="onSubmit()">
+  <fieldset class=" grid grid-cols-2 gap-4">
+
+    <label for="full-name">Full Name</label>
+    <input type="text" formControlName="fullname" minlength="2" name="name" id="nameid" placeholder="First and Last"
+     class="w-full border-gray-300 rounded-lg shadow-sm focus:border-indigo-500 focus:ring-indigo-500">
+
+    <label for="email-address">Email Address</label>
+    <input type="email" formControlName="email" name="_replyto" id="emailid" placeholder="email@domain.tld"
+    class="w-full border-gray-300 rounded-lg shadow-sm focus:border-indigo-500 focus:ring-indigo-500">
+
+    <label for="message">Message</label>
+    <textarea rows="5" formControlName="message" name="message" id="message" placeholder="Type your message here..." required=""
+    class="w-full border-gray-300 rounded-lg shadow-sm focus:border-indigo-500 focus:ring-indigo-500">
+</textarea>
+    <button type="submit" value="Submit" class="cursor-pointer backdrop-blur-sm bg-white/10 shadow-md hover:translate-x-1 hover:-translate-y-1 py-2 px-4 self-center">Submit</button>
+
+  </fieldset>
+</form>
