@@ -7,11 +7,9 @@ on:
   # Triggers the workflow on push or pull request events but only for the master branch
   push:
     branches: master
-  pull_request:
-  # branches: [ master ]
 
   # Allows you to run this workflow manually from the Actions tab
-  workflow_dispatch:
+# workflow_dispatch:
 
 # A workflow run is made up of one or more jobs that can run sequentially or in parallel
 jobs:
@@ -24,11 +22,14 @@ jobs:
     steps:
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
       - name: Checkout
-      - uses: actions/checkout@v2
+        uses: actions/checkout@v2
 
       # Sets up Node JS
       - name: Setup Node.js environment
         uses: actions/setup-node@v3.0.0
+        
+      - name: Install dependencies
+        run: npm install
        
       # Build for production
       - name: Build prod
@@ -39,5 +40,5 @@ jobs:
         uses: peaceiris/actions-gh-pages@v3.7.3
         with:
             github_token: ${{ secrets.GITHUB_TOKEN }}
-            publish_dir: dist/
+            publish_dir: dist/yassine-mejri.github.io/
             
