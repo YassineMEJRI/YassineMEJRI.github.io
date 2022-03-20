@@ -1,21 +1,26 @@
-<h2 class="text-white ">Get in touch</h2>
+<h2 class="text-white font-extrabold text-6xl p-5">Get in touch</h2>
 
-<form id="fs-frm" accept-charset="utf-8" [formGroup]="contactForm" (ngSubmit)="onSubmit()">
-  <fieldset class=" grid grid-cols-2 gap-4">
+<form id="fs-frm" accept-charset="utf-8" [formGroup]="contactForm" (ngSubmit)="onSubmit()" class="max-w-2xl">
+  <fieldset class="grid grid-cols-1 gap-4">
 
-    <label for="full-name">Full Name</label>
-    <input type="text" formControlName="fullname" minlength="2" name="name" id="nameid" placeholder="First and Last"
-     class="w-full border-gray-300 rounded-lg shadow-sm focus:border-indigo-500 focus:ring-indigo-500">
-
-    <label for="email-address">Email Address</label>
-    <input type="email" formControlName="email" name="_replyto" id="emailid" placeholder="email@domain.tld"
-    class="w-full border-gray-300 rounded-lg shadow-sm focus:border-indigo-500 focus:ring-indigo-500">
-
-    <label for="message">Message</label>
-    <textarea rows="5" formControlName="message" name="message" id="message" placeholder="Type your message here..." required=""
-    class="w-full border-gray-300 rounded-lg shadow-sm focus:border-indigo-500 focus:ring-indigo-500">
-</textarea>
-    <button type="submit" value="Submit" class="cursor-pointer backdrop-blur-sm bg-white/10 shadow-md hover:translate-x-1 hover:-translate-y-1 py-2 px-4 self-center">Submit</button>
+    <div class="backdrop-blur-sm bg-white/10 p-4 ring-1 ring-indigo-500">
+      <label for="full-name" class="text-pink-500 text-lg font-bold">Full Name</label>
+      <input type="text" formControlName="fullname" minlength="2" name="name" id="nameid" placeholder="First and Last Name"
+       class="w-full border-gray-300 rounded-lg shadow-sm focus:border-indigo-500 focus:ring-indigo-500 my-3">
+      <label for="email-address" class="text-pink-500 text-lg font-bold">Email Address</label>
+      <input type="email" formControlName="email" name="_replyto" id="emailid" placeholder="email@domain.tld"
+      class="w-full border-gray-300 rounded-lg shadow-sm focus:border-indigo-500 focus:ring-indigo-500 my-3">
+      <label for="message" class="text-pink-500 text-lg font-bold">Message</label>
+      <textarea rows="5" formControlName="message" name="message" id="message" placeholder="Type your message here..." required=""
+      class="w-full border-gray-300 rounded-lg shadow-sm focus:border-indigo-500 focus:ring-indigo-500 my-3">
+      </textarea>
+    </div>
+    <button type="submit" value="Submit" class="cursor-pointer backdrop-blur-sm bg-white/10 shadow-md ring-1 ring-indigo-500 text-white text-xl hover:translate-x-1 hover:-translate-y-1 py-2 px-4 self-center flex flex-row justify-center items-center gap-3">
+      <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="cyan" class="bi bi-send" viewBox="0 0 16 16">
+        <path d="M15.854.146a.5.5 0 0 1 .11.54l-5.819 14.547a.75.75 0 0 1-1.329.124l-3.178-4.995L.643 7.184a.75.75 0 0 1 .124-1.33L15.314.037a.5.5 0 0 1 .54.11ZM6.636 10.07l2.761 4.338L14.13 2.576 6.636 10.07Zm6.787-8.201L1.591 6.602l4.339 2.76 7.494-7.493Z"/>
+      </svg>
+      Send
+    </button>
 
   </fieldset>
 </form>
