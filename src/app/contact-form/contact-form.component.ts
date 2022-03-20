@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { FormGroup, FormControl } from '@angular/forms';
+import { FormGroup, FormControl, Validators } from '@angular/forms';
 import { HttpClient } from '@angular/common/http';
 
 @Component({
@@ -9,11 +9,11 @@ import { HttpClient } from '@angular/common/http';
   ]
 })
 export class ContactFormComponent implements OnInit {
-
+  sent: boolean = false;
   contactForm = new FormGroup({
-    fullname: new FormControl(''),
-    email: new FormControl(''),
-    message: new FormControl('')
+    fullname: new FormControl('', [Validators.required, Validators.minLength(2)]),
+    email: new FormControl('', [Validators.email ,Validators.required]),
+    message: new FormControl('', Validators.required)
   });
 
   constructor(private http: HttpClient) { }
@@ -22,17 +22,25 @@ export class ContactFormComponent implements OnInit {
   }
 
   onSubmit() {
-    let formData = new FormData();
-    formData.append('name', this.contactForm.value.fullname);
-    formData.append('email', this.contactForm.value.email);
-    formData.append('message', this.contactForm.value.message);
+    if(this.contactForm.valid){
+      let formData = new FormData();
+      formData.append('name', this.contactForm.value.fullname);
+      formData.append('email', this.contactForm.value.email);
+      formData.append('message', this.contactForm.value.message);
 
-    this.http.post('https://formspree.io/f/xjvloplj', formData)
-      .subscribe({
-        next: (response) => console.log(response),
-        error: (error) => console.log(error),
-      });
-
-    this.contactForm.reset();
+      this.http.post('https://formspree.io/f/xjvloplj', formData)
+        .subscribe({
+          next: (response) => {
+            this.contactForm.reset();
+            this.sent = true;
+          },
+          error: (error) => console.log(error),
+        });
+    }
   }
+
+  get name() { return this.contactForm.get('fullname');}
+  get email() { return this.contactForm.get('email'); }
+  get message() { return this.contactForm.get('message'); }
+
 }

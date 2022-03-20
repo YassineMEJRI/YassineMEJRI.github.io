@@ -8,3 +8,9 @@
         @apply text-white md:text-8xl p-5 pl-10 text-3xl;
     }
 }
+
+@layer components {
+    .invalid-error{
+        @apply text-sm text-red-600 ml-3
+    }
+}
