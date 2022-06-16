@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { FormGroup, FormControl, Validators } from '@angular/forms';
+import { UntypedFormGroup, UntypedFormControl, Validators } from '@angular/forms';
 import { HttpClient } from '@angular/common/http';
 
 @Component({
@@ -10,10 +10,10 @@ import { HttpClient } from '@angular/common/http';
 })
 export class ContactFormComponent implements OnInit {
   sent: boolean = false;
-  contactForm = new FormGroup({
-    fullname: new FormControl('', [Validators.required, Validators.minLength(2)]),
-    email: new FormControl('', [Validators.email ,Validators.required]),
-    message: new FormControl('', Validators.required)
+  contactForm = new UntypedFormGroup({
+    fullname: new UntypedFormControl('', [Validators.required, Validators.minLength(2)]),
+    email: new UntypedFormControl('', [Validators.email ,Validators.required]),
+    message: new UntypedFormControl('', Validators.required)
   });
 
   constructor(private http: HttpClient) { }
