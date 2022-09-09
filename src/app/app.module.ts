@@ -8,6 +8,10 @@ import { SectionThreeComponent } from './section-three/section-three.component';
 import { ContactFormComponent } from './contact-form/contact-form.component';
 import { ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
+import { AppRoutingModule } from './app-routing.module';
+import { FourOhFourComponent } from './four-oh-four/four-oh-four.component';
+import { MainComponent } from './main/main.component';
+import {RouterModule} from "@angular/router";
 
 
 @NgModule({
@@ -16,12 +20,16 @@ import { HttpClientModule } from '@angular/common/http';
     SectionOneComponent,
     SectionTwoComponent,
     SectionThreeComponent,
-    ContactFormComponent
+    ContactFormComponent,
+    FourOhFourComponent,
+    MainComponent
     ],
   imports: [
     BrowserModule,
     HttpClientModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    AppRoutingModule,
+    RouterModule
   ],
   providers: [],
   bootstrap: [AppComponent]
