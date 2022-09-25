@@ -12,6 +12,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { FourOhFourComponent } from './four-oh-four/four-oh-four.component';
 import { MainComponent } from './main/main.component';
 import {RouterModule} from "@angular/router";
+import { SectionProjectsComponent } from './section-projects/section-projects.component';
 
 
 @NgModule({
@@ -22,7 +23,8 @@ import {RouterModule} from "@angular/router";
     SectionThreeComponent,
     ContactFormComponent,
     FourOhFourComponent,
-    MainComponent
+    MainComponent,
+    SectionProjectsComponent
     ],
   imports: [
     BrowserModule,

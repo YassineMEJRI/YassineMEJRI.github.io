@@ -5,7 +5,7 @@
 
 @layer base {
     h1 {
-        @apply text-white md:text-8xl p-5 pl-10 text-3xl;
+        @apply text-[#272341] md:text-6xl py-5 text-xl font-extrabold font-sans;
     }
 }
 
