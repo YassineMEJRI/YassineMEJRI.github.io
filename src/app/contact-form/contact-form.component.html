@@ -4,7 +4,7 @@
   <fieldset class="grid grid-cols-1 gap-4 w-full">
     <div class="backdrop-blur-sm bg-white/10 p-4 ring-1 ring-indigo-500">
 
-      <label for="full-name" class="text-pink-500 text-lg font-bold">Full Name</label>
+      <label for="nameid" class="text-pink-500 text-lg font-bold">Full Name</label>
       <span *ngIf="name?.invalid && (name?.dirty || name?.touched)" class="invalid-error">
         <span *ngIf="name?.errors?.['required']">
           Please type in your name.
@@ -17,7 +17,7 @@
        class="w-full border-gray-300 rounded-lg shadow-sm focus:border-indigo-500 focus:ring-indigo-500 my-3">
 
 
-      <label for="email-address" class="text-pink-500 text-lg font-bold">Email Address</label>
+      <label for="emailid" class="text-pink-500 text-lg font-bold">Email Address</label>
       <span *ngIf="email?.invalid && (email?.dirty || email?.touched)" class="invalid-error">
         <span *ngIf="email?.errors?.['required']">
           Please add a reply-to email.
@@ -47,6 +47,6 @@
   </fieldset>
 </form>
 
-<div *ngIf="sent" class="font-semibold text-teal-300 text-center backdrop-blur-sm bg-green-500/25 p-4 my-2 ring ring-green-400/20 shadow-md">
+<div *ngIf="sent" class="font-semibold text-white text-center backdrop-blur-sm bg-pink-900/25 p-4 my-2 ring ring-amber-200/20 shadow-md">
   Message sent successfully! Thank you!
 </div>
