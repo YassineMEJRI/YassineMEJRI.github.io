@@ -13,6 +13,9 @@ import { FourOhFourComponent } from './four-oh-four/four-oh-four.component';
 import { MainComponent } from './main/main.component';
 import {RouterModule} from "@angular/router";
 import { SectionProjectsComponent } from './section-projects/section-projects.component';
+import { CarouselComponent } from './carousel/carousel.component';
+import { FooterComponent } from './footer/footer.component';
+import { ToolsComponent } from './tools/tools.component';
 
 
 @NgModule({
@@ -24,7 +27,10 @@ import { SectionProjectsComponent } from './section-projects/section-projects.co
     ContactFormComponent,
     FourOhFourComponent,
     MainComponent,
-    SectionProjectsComponent
+    SectionProjectsComponent,
+    CarouselComponent,
+    FooterComponent,
+    ToolsComponent
     ],
   imports: [
     BrowserModule,

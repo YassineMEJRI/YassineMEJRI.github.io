@@ -1,0 +1,17 @@
+div.grid {
+  width: 75%;
+}
+
+div.grid img {
+  @apply w-24 py-3 justify-self-end mr-10
+}
+
+div.grid img:nth-child(6n+1) {
+  @apply justify-self-start ml-10
+}
+div.grid img:nth-child(6n+2) {
+  @apply justify-self-start ml-10
+}
+div.grid img:nth-child(6n+3) {
+  @apply justify-self-start ml-10
+}
