@@ -1,0 +1,4 @@
+.max-w-17rem {
+  max-width: 17rem;
+  @apply md:max-w-sm;
+}

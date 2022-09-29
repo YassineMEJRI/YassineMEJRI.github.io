@@ -3,15 +3,16 @@ div.grid {
 }
 
 div.grid img {
-  @apply w-24 py-3 justify-self-end mr-10
+  @apply md:w-24 w-1/2 py-3
 }
 
-div.grid img:nth-child(6n+1) {
-  @apply justify-self-start ml-10
-}
-div.grid img:nth-child(6n+2) {
-  @apply justify-self-start ml-10
-}
+div.grid img:nth-child(6n+1),
+div.grid img:nth-child(6n+2),
 div.grid img:nth-child(6n+3) {
-  @apply justify-self-start ml-10
+  @apply justify-self-start md:ml-4
+}
+div.grid img:nth-child(6n+4),
+div.grid img:nth-child(6n+5),
+div.grid img:nth-child(6n) {
+  @apply justify-self-end md:mr-4
 }

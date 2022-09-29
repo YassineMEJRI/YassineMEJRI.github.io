@@ -1,0 +1,19 @@
+.project-title {
+  @apply text-[#272341] text-4xl py-5 font-extrabold font-sans mx-20;
+}
+
+.project-group:nth-child(odd) {
+  @apply flex-col-reverse md:flex-row
+}
+
+.project-group:nth-child(even) {
+  @apply flex-col md:flex-row
+}
+
+.project-group {
+  @apply flex w-full justify-evenly md:items-start py-24 items-center
+}
+
+.project-card {
+  @apply max-w-min rounded overflow-hidden shadow-lg
+}
